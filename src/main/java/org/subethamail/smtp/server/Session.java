@@ -327,7 +327,7 @@ public class Session implements Runnable, MessageContext
 	public void closeSocket() throws IOException
 	{
 		if ((this.socket != null) && this.socket.isBound() && !this.socket.isClosed())
-			this.socket.close();
+			this.socket.shutdownOutput();
 	}
 
 	/**
